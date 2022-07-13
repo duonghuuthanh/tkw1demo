@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: myThuPhap;
+                src: url(fonts/TMC-Ong\ Do.TTF);
+            }
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* background: conic-gradient(orange, blue, green); */
+            /* background-image: url(demo.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat; */
+            /* background-position: left top; */
+            /* background-size: 200px; */
+            
+          }
+          h1 {
+            font-style: italic;
+          }
+          h1.test {
+            background-color: red;
+            width: 40%;
+          }
+
+          ul {
+            list-style-image: url(images/heart.png);
+          }
+          table.main {
+            border-collapse: collapse;
+            width: 50%;
+          }
+
+          table.main tr:nth-child(even) {
+            color:white;
+            background-color: darkblue;
+          }
+          table.main tr:nth-child(odd) {
+            background-color: red;
+            color: gold;
+          }
+          table.main tr:first-child {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          table.main tr:last-child {
+            background-color: aquamarine;
+          }
+          table.main tr:nth-child(4) {
+            background-color: azure;
+          }
+          table.main tr:hover {
+            background-color: darkgreen;
+            color: azure;
+          }
+      
+          a:link {
+            color:brown;
+          }
+          a:visited {
+            color:green;
+          }
+          a:active {
+            color: gold;
+            background-color: aquamarine;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+
+          div.demo {
+            width: 500px;
+            /* height: 200px; */
+            background-color: gold;
+            color: red;
+          }
+         
+
+          a.go {
+            text-decoration: none;
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            right: 10px;
+            bottom: 10px;
+          }
+          img.left {
+                position: absolute;
+                top: 0;
+                z-index: -1; 
+          }
+
+          div.test {
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            background-color: lightblue;
+            height: 400px;
+          }
+
+          div.test > div {
+            width: 15%;
+            margin: 1%;
+            height: 120px;
+            border: 2px dashed blue;
+            /* display: inline-block; */
+            font-size: 40px;
+            font-weight: bold;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="test">
+            <div>A</div>
+            <div style="height: 150px;">B</div>
+            <div>C</div>
+            <div style="height: 120px;">D</div>
+            <div>E</div>
+            <div style="height: 100px;">F</div>
+            <div>G</div>
+        </div>
+
+        <a class="go" href="#">GO TO TOP</a>
+        <h1>TEST ABC</h1>
+        <div>
+            <img class="left" width="220" src="demo.png" alt="test" />
+        <div class="demo">
+            Theo El Pais và đài phát thanh Monte Carlo, PSG quyết định loại bỏ Neymar để xây dựng đội ngũ mang tính kỷ luật cao hơn. Nhà vô địch Pháp hoàn toàn tập trung vào bóng đá.
+
+        </div>
+        </div>
+        
+        <h1 style="clear: left;">
+            <a href="https://duonghuuthanh.github.io/it01/bai01.html">DEMO</a>
+        </h1>
+        <table class="main" border="1">
+            <tr>
+                <td>STT</td>
+                <td>HO TEN</td>
+                <td>QUE QUAN</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NGUYEN VAN A</td>
+                <td>TPHCM</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li>TEST1</li>
+            <li>TEST1</li>
+            <li>TEST1</li>
+            <li>TEST1</li>
+        </ul>
+        <h1 class="test" style="color:gold;">HELLO WORLD</h1>
+       
+        <h1 style="color:red;">HELLO WORLD</h1>
+       
+        <h1 style="color:red;">HELLO WORLD</h1>
+       
+        <h1 style="color:red;">HELLO WORLD</h1>
+       
+        <h1 style="color:red;">HELLO WORLD</h1>
+       
+        <form method="post">
+            <fieldset>
+                <legend>FORM DEMO</legend>
+        <table width="40%">
+            <tr>
+                <td>Textbox</td>
+                <td>
+                    <input type="text" placeholder="NHAP USERNAME..."  required />
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>
+                    <input type="number" step="10" />
+                </td>
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td>
+                    <input type="range" min="10" max="100" />
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="color" />
+                </td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>
+                    <input type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td>Date Time</td>
+                <td>
+                    <input type="datetime-local" />
+                </td>
+            </tr>
+            <tr>
+                <td>Checkbox</td>
+                <td>
+                    <input type="checkbox" checked /> Vietnamese
+                    <input type="checkbox" /> English
+                    <input type="checkbox" /> Chinese
+                </td>
+            </tr>
+            <tr>
+                <td>Radio</td>
+                <td>
+                    <input type="radio" name="p" /> TPHCM
+                    <input type="radio" name="p" checked /> CAN THO
+                    <input type="radio" name="p" /> BINH DUONG
+                </td>
+            </tr>
+            <tr>
+                <td>SelectBox</td>
+                <td>
+                    <select>
+                        <optgroup label="CHAU A">
+                            <option>Vietnam</option>
+                            <option>Thailad</option>
+                        </optgroup>
+                        <optgroup label="CHAU MY">
+                            <option selected>America</option>
+                            <option>Brazil</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ListBox</td>
+                <td>
+                    <select multiple>
+                        <optgroup label="CHAU A">
+                            <option>Vietnam</option>
+                            <option>Thailad</option>
+                        </optgroup>
+                        <optgroup label="CHAU MY">
+                            <option selected>America</option>
+                            <option>Brazil</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Textarea</td>
+                <td>
+                    <textarea cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>BUTTONS</td>
+                <td>
+                    <input type="submit" value="SUBMIT" />
+                    <input type="reset" value="RESET" />
+                    <input type="file" value="FILE" />
+                    <input type="button" value="BUTTON" />
+                    <button>&#9757; BUTTON</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+        </form>
+    </body>
+</html>

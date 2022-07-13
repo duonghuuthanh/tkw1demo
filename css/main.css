@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+  }
+  header > h1 {
+    font-size: 8vw;
+  }
+  div.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.product {
+    width: 33.33%;
+    padding: 15px;
+  }
+
+  @keyframes doimau {
+    0% {
+      background-color: gold;
+    }
+    25% {
+      background-color: aquamarine;
+    }
+    75% {
+      background-color: cadetblue;
+    }
+    100% {
+      background-color: blue;
+    }
+  }
+
+  div.promo {
+    position: absolute;
+    background-color: gold;
+    color: red;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 0 15px 0 15px;
+    animation: doimau 2s infinite;
+  }
+
+  div.product > div {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 15px;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+  }
+
+  div.product img {
+    width: 100%;
+    transition: transform ease-in 2s;
+  }
+
+  div.product img:hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 800px) {
+    body {
+      background-color: dodgerblue;
+    }
+    div.product {
+      width: 50%;
+    }
+    div.product > div {
+      background-color: olive;
+    }
+  }
