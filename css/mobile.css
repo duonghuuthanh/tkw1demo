@@ -13,3 +13,36 @@ background-color: antiquewhite;
       background-color: aquamarine;
     }
   }
+
+
+aside.ads > div {
+  display: none !important;
+}
+
+header {
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+ul.menu {
+  font-size: 0.6rem;
+  margin-left: 0;
+}
+
+div.gallery > figure {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+h1.subject {
+  font-size: 1.5rem;
+}

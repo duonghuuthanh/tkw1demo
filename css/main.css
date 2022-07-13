@@ -1,9 +1,72 @@
+:root {
+  --width: 70%;
+}
+
 * {
     box-sizing: border-box;
   }
-  header > h1 {
-    font-size: 8vw;
+
+  .ads > div {
+    background: linear-gradient(blue, darkblue);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    border: 2px solid gold;
+    width: calc((100% - var(--width))/2 - 2%);
+    position: fixed;
   }
+
+  .ads > div:first-child {
+    left: 1%;
+  }
+
+  .ads > div:last-child {
+    right: 1%;
+  }
+
+  .container {
+    width: var(--width);
+    margin: 0 auto;
+  }
+
+  header {
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+  }
+  @font-face {
+    font-family: thuphap;
+    src: url(../fonts/TMC-Ong\ Do.TTF);
+  }
+  header > h1 {
+    font-size: 2.5rem;
+    font-family: thuphap;
+    color: darkred;
+    text-shadow: 3px 4px 3px red;
+  }
+
+  ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+  }
+  ul.menu > li {
+    margin-right: 5px;
+  }
+  ul.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    background: linear-gradient(blue, lightblue);
+    text-decoration: none;
+    color: white;
+    border-radius: 15px 15px 0 0;
+  }
+
   div.products {
     display: flex;
     flex-wrap: wrap;
@@ -69,4 +132,57 @@
     div.product > div {
       background-color: olive;
     }
+  }
+  div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.gallery > figure {
+    width: 25%;
+    margin: 0;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  h1.subject {
+    text-align: center;
+    font-size: 2.5rem;
+    color: blue;
+    text-shadow: 3px 4px 4px blue;
+  }
+
+  h1.subject::after {
+    content: "---o0o---";
+    display: block;
+    font-size: 1.5rem;
+    text-shadow: none;
+  }
+
+  .subcontent {
+    display: none !important; 
+    position: absolute;
+    
+  }
+
+  .sub:hover .subcontent {
+    display: block !important;
+  }
+
+  .subcontent::after {
+    content: " ";
+    bottom: 100%;
+    left: 10%;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent blue transparent;
+  }
+
+  footer {
+    background-color: darkblue;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
   }
