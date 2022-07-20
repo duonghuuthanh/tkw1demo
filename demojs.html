@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Demo</title>
+    <script src="js/main.js"></script>
+    <script>
+      function giaiBac1() {
+        var a = parseFloat(document.getElementById("aId").value);
+        var b = parseFloat(document.getElementById("bId").value);
+        if (a == 0)
+          if (b == 0) console.info("VO SO NGHIEM");
+          else console.info("VO NGHIEM");
+        else console.info("Nghiem x = " + (-b / a).toFixed(2));
+      }
+
+      function doiMau(obj) {
+        //var d = document.getElementById("color").value;
+        var b = document.getElementById("main");
+        b.style.backgroundColor = obj.value;
+      }
+
+      //
+      function init() {}
+
+      function doiAnh(obj) {
+        var im = document.getElementById("mainImg");
+        im.src = obj.src;
+      }
+
+      function doiMauAnh(prefix) {
+        var im = document.getElementById("mainImg");
+        im.src = `images/galaxys8/${prefix}1.jpg`;
+
+        var images = document.querySelectorAll(".thumbnail img");
+        for (var i = 0; i < images.length; i++)
+          images[i].src = `images/galaxys8/${prefix}${i + 1}.jpg`;
+      }
+    </script>
+    <style>
+      div.gallery {
+        width: 40%;
+      }
+      div.thumbnail {
+        display: flex;
+      }
+      div.gallery img {
+        width: 100%;
+      }
+      div.thumbnail > div {
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body id="main" onload="init()">
+    <input
+      type="button"
+      height="30"
+      onclick="doiMauAnh('Blue_')"
+      style="background-color: blue; width: 100px"
+    />
+    <input
+      type="button"
+      width="100"
+      height="30"
+      onclick="doiMauAnh('Gold_')"
+      style="background-color: gold; width: 100px"
+    />
+    <input
+      type="button"
+      width="100"
+      height="30"
+      onclick="doiMauAnh('Black_')"
+      style="background-color: black; width: 100px"
+    />
+    <div class="gallery">
+      <img id="mainImg" src="images/galaxys8/Gold_1.jpg" />
+      <div class="thumbnail">
+        <div>
+          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_1.jpg" />
+        </div>
+        <div>
+          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_2.jpg" />
+        </div>
+        <div>
+          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_3.jpg" />
+        </div>
+        <div>
+          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_4.jpg" />
+        </div>
+        <div>
+          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_5.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <input
+      type="text"
+      id="color"
+      onchange="doiMau(this)"
+      placeholder="Nhap ten mau..."
+    />
+    <h1>Giai va bien ax + b = 0</h1>
+    <table>
+      <tr>
+        <td>a =</td>
+        <td>
+          <input type="number" id="aId" />
+        </td>
+      </tr>
+      <tr>
+        <td>b =</td>
+        <td>
+          <input type="number" id="bId" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input onclick="giaiBac1()" type="button" value="GIAI" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
