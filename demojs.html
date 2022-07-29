@@ -5,40 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Demo</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      function giaiBac1() {
-        var a = parseFloat(document.getElementById("aId").value);
-        var b = parseFloat(document.getElementById("bId").value);
-        if (a == 0)
-          if (b == 0) console.info("VO SO NGHIEM");
-          else console.info("VO NGHIEM");
-        else console.info("Nghiem x = " + (-b / a).toFixed(2));
-      }
 
-      function doiMau(obj) {
-        //var d = document.getElementById("color").value;
-        var b = document.getElementById("main");
-        b.style.backgroundColor = obj.value;
-      }
-
-      //
-      function init() {}
-
-      function doiAnh(obj) {
-        var im = document.getElementById("mainImg");
-        im.src = obj.src;
-      }
-
-      function doiMauAnh(prefix) {
-        var im = document.getElementById("mainImg");
-        im.src = `images/galaxys8/${prefix}1.jpg`;
-
-        var images = document.querySelectorAll(".thumbnail img");
-        for (var i = 0; i < images.length; i++)
-          images[i].src = `images/galaxys8/${prefix}${i + 1}.jpg`;
-      }
-    </script>
     <style>
       div.gallery {
         width: 40%;
@@ -52,9 +21,70 @@
       div.thumbnail > div {
         width: 20%;
       }
+      #myBall {
+        width: 500px;
+        height: 400px;
+        background-color: lightgray;
+        position: relative;
+      }
+      #ball {
+        width: 80px;
+        position: absolute;
+      }
+      a.go {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+        width: 120px;
+        padding: 1rem 1.5rem;
+        background-color: darkblue;
+        color: white;
+      }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animate__animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
+    </script>
   </head>
   <body id="main" onload="init()">
+    <a class="go" href="javascript:;">GO TO TOP</a>
+    <div>
+      <input type="text" id="addColorBtn" />
+      <div id="colors" style="display: flex">
+        <button
+          style="width: 100px; height: 30px; background-color: green"
+        ></button>
+        <button
+          style="width: 100px; height: 30px; background-color: brown"
+        ></button>
+      </div>
+    </div>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="animate">Animate</button>
+    <div>
+      <img id="ball2" style="position: relative" src="images/ball.png" />
+    </div>
+
+    <button onclick="play()">Play</button>
+    <button onclick="stop()">Stop</button>
+
+    <div id="myBall">
+      <img id="ball" src="images/ball.png" />
+    </div>
     <input
       type="button"
       height="30"
@@ -76,22 +106,126 @@
       style="background-color: black; width: 100px"
     />
     <div class="gallery">
-      <img id="mainImg" src="images/galaxys8/Gold_1.jpg" />
+      <img
+        id="mainImg"
+        class="animate__animated animate__heartBeat"
+        src="images/galaxys8/Gold_1.jpg"
+      />
       <div class="thumbnail">
         <div>
-          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_1.jpg" />
+          <img src="images/galaxys8/Gold_1.jpg" />
         </div>
         <div>
-          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_2.jpg" />
+          <img src="images/galaxys8/Gold_2.jpg" />
         </div>
         <div>
-          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_3.jpg" />
+          <img src="images/galaxys8/Gold_3.jpg" />
         </div>
         <div>
-          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_4.jpg" />
+          <img src="images/galaxys8/Gold_4.jpg" />
         </div>
         <div>
-          <img onmouseenter="doiAnh(this)" src="images/galaxys8/Gold_5.jpg" />
+          <img src="images/galaxys8/Gold_5.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img
+        id="mainImg"
+        class="wow animate__heartBeat"
+        src="images/galaxys8/Gold_1.jpg"
+      />
+      <div class="thumbnail">
+        <div>
+          <img src="images/galaxys8/Gold_1.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_2.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_3.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_4.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_5.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img
+        id="mainImg"
+        class="wow animate__bounce"
+        src="images/galaxys8/Gold_1.jpg"
+      />
+      <div class="thumbnail">
+        <div>
+          <img src="images/galaxys8/Gold_1.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_2.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_3.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_4.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_5.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img
+        id="mainImg"
+        class="wow animate__bounce"
+        src="images/galaxys8/Gold_1.jpg"
+      />
+      <div class="thumbnail">
+        <div>
+          <img src="images/galaxys8/Gold_1.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_2.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_3.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_4.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_5.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img
+        id="mainImg"
+        class="wow animate__bounce"
+        src="images/galaxys8/Gold_1.jpg"
+      />
+      <div class="thumbnail">
+        <div>
+          <img src="images/galaxys8/Gold_1.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_2.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_3.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_4.jpg" />
+        </div>
+        <div>
+          <img src="images/galaxys8/Gold_5.jpg" />
         </div>
       </div>
     </div>
@@ -115,6 +249,9 @@
         <td>
           <input type="number" id="bId" />
         </td>
+      </tr>
+      <tr>
+        <td colspan="2" id="kq" style="color: red">KET QUA</td>
       </tr>
       <tr>
         <td colspan="2">
