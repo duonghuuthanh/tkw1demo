@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/bai01.js"></script>
+    <link rel="stylesheet" href="css/jscss01.css" />
+</head>
+<body onload="init()">
+    <h1>ax<sup>2</sup> + bx + c = 0</h1>
+    <table>
+        <tr>
+            <td>a = </td>
+            <td>
+                <input type="number" id="aId" />
+            </td>
+        </tr>
+        <tr>
+            <td>b = </td>
+            <td>
+                <input type="number" id="bId" />
+            </td>
+        </tr>
+        <tr>
+            <td>c = </td>
+            <td>
+                <input type="number" id="cId" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="kq">...</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Giai" onclick="giaiBac2();" />
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>So tien = </td>
+            <td>
+                <input type="number" id="stId" />
+            </td>
+            <td>(VND)</td>
+        </tr>
+        <tr>
+            <td>Don vi</td>
+            <td>
+                <select id="dvId">
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="aud">AUD</option>
+                </select>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3" id="kq2"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="button" value="Doi tien" onclick="doiTien()" />
+            </td>
+        </tr>
+    </table>
+
+    <div class="gallery flex">
+        <div>
+            <img id="mainImg" src="images/galaxys8/Blue_1.jpg" />
+            <div class="thumb flex">
+                <div><img src="images/galaxys8/Blue_1.jpg" /></div>
+                <div><img src="images/galaxys8/Blue_2.jpg" /></div>
+                <div><img src="images/galaxys8/Blue_3.jpg" /></div>
+                <div><img src="images/galaxys8/Blue_4.jpg" /></div>
+                <div><img src="images/galaxys8/Blue_5.jpg" /></div>
+            </div>
+        </div>
+        <div>
+            <h1>GALAXY S8</h1>
+            <div class="buttons">
+                <button rel="Black_" style="background-color: black;"></button>
+                <button rel="Blue_" style="background-color: blue;"></button>
+                <button rel="Gold_" style="background-color: gold;"></button>
+                <button rel="Silver_" style="background-color: silver;"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

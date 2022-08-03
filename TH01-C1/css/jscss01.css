@@ -1,0 +1,20 @@
+.flex {
+    display: flex;
+}
+
+.gallery > div {
+    width: 50%;
+}
+
+.thumb > div {
+    width: 20%;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.buttons button {
+    width: 100px;
+    height: 30px;
+}

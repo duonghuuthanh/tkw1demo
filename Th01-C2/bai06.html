@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(images/bg.jpg);
+      }
+
+      table.main {
+        width: 80%;
+        background-color: white;
+      }
+
+      img.t {
+        width: 100%;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      table.footer {
+        width: 100%;
+        background-color: #0a6fa3;
+      }
+
+      table.footer tr > td:last-child {
+        text-align: right;
+      }
+
+      ul.menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background-color: lightblue;
+      }
+
+      ul.menu > li {
+        border-right: 1px solid darkblue;
+      }
+
+      ul.menu > li > a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+      }
+
+      ul.menu > li > a:hover {
+        background-color: darkblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">ITEM 1</a></li>
+      <li><a href="#">ITEM 2</a></li>
+      <li><a href="#">ITEM 3</a></li>
+      <li><a href="#">ITEM 4</a></li>
+      <li><a href="#">ITEM 5</a></li>
+    </ul>
+
+    <table class="main" align="center">
+      <tr>
+        <td>
+          <img class="t" src="images/banner.jpg" alt="OU" />
+          <h1>KHAO SAT..</h1>
+          <p>Nham...</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ol>
+            <li>
+              Ban co tham gia thu vien?
+              <ul>
+                <li><input type="radio" name="q1" /> Co</li>
+                <li><input type="radio" name="q1" /> Khong</li>
+              </ul>
+            </li>
+            <li>
+              Ban co hai long khong?
+
+              <table class="center">
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Hoan toan khong dong y</td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td>Hoan toan dong y</td>
+                </tr>
+              </table>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="footer">
+            <tr>
+              <td>
+                <ul>
+                  <li>A</li>
+                  <li>B</li>
+                  <li>C</li>
+                  <li>D</li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/b.PNG" alt="test" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

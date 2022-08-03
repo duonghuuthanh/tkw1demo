@@ -1,0 +1,124 @@
+:root {
+    --bg: lightblue;
+    --width: 80%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex.subject {
+    justify-content: space-between;
+}
+
+header {
+    background: linear-gradient(var(--bg), white, var(--bg));
+    padding: 10px;
+}
+
+header img {
+    width: 150px;
+    padding: 5px;
+}
+
+.ads > div {
+    border: 1px dashed darkblue;
+    margin: 5px;
+    padding: 3rem 1rem;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:aquamarine;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: .8rem 1.5rem;
+    text-decoration: none;
+}
+
+ul.menu > li > a:hover {
+    background: darkblue;
+    color: white;
+}
+
+.left {
+    width: calc(100% - var(--width));
+}
+
+.right {
+    width: var(--width);
+}
+
+ul.v-menu > li > a{
+    background: linear-gradient(var(--bg), white);
+}
+
+div.book {
+    width: 25%;
+    padding: 1%;
+}
+
+div.book img {
+    width: 100%;
+    transition: transform .5s;
+}
+
+div.book img:hover {
+    transform: scale(0.8);
+}
+
+.flex.content {
+    align-items: flex-start;
+}
+
+footer {
+    background: linear-gradient(var(--bg), white, var(--bg));
+    padding: 2rem 0;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+footer > span {
+    animation: dichuyen 15s infinite;
+    position: relative;
+}
+
+@keyframes dichuyen {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.subcontent {
+    display: none !important;
+    position: absolute;
+}
+
+.subcontent::after {
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--bg) transparent;
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+}
+
+.sub:hover .subcontent {
+    display: block !important;
+}

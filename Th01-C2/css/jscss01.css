@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+}
+
+.thumb > div {
+    width: 20%;
+
+}
+
+.ga img {
+    width: 100%;
+}
+
+.demo > div {
+    width: 40%;
+}
+
+.buttons > button {
+    width: 60px;
+    height: 40px;
+}

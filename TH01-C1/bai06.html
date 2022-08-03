@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(images/bg.jpg);
+      }
+      table.info {
+        width: 80%;
+        background-color: white;
+      }
+      ul {
+        list-style-type: none;
+      }
+      .sub {
+        text-align: center;
+      }
+      table.foot {
+        width: 100%;
+        background-color: #0a6fa3;
+      }
+
+      table.foot tr td:last-child {
+        text-align: right;
+      }
+
+      ul.menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background-color: lightblue;
+      }
+
+      ul.menu > li {
+        border-right: 1px solid black;
+      }
+
+      ul.menu > li:last-child {
+        border-right: none;
+        /* margin-left: auto; */
+      }
+
+      ul.menu > li > a {
+        text-align: center;
+        display: block;
+        padding: 15px 30px;
+        text-decoration: none;
+      }
+
+      ul.menu > li > a:hover {
+        background-color: darkblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+      <li><a href="#">Item 3</a></li>
+      <li><a href="#">Item 4</a></li>
+      <li><a href="#">Item 5</a></li>
+    </ul>
+
+    <table class="info" align="center">
+      <tr>
+        <td>
+          <img src="images/banner.jpg" alt="OU" />
+          <h1>KHAO SAT</h1>
+          <p>Nham...</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ol>
+            <li>
+              Ban co den thu vien?
+              <ul>
+                <li><input type="radio" name="q1" /> Co</li>
+                <li><input type="radio" name="q1" /> Khong</li>
+              </ul>
+            </li>
+            <li>
+              Muc do hai long?
+
+              <table class="sub">
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Hoan toan khong dong y</td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td><input type="radio" name="q2" /></td>
+                  <td>Hoan toan dong y</td>
+                </tr>
+              </table>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="foot">
+            <tr>
+              <td>
+                <ul>
+                  <li>A</li>
+                  <li>B</li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </td>
+              <td>
+                <img src="images/b.PNG" alt="TEST" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

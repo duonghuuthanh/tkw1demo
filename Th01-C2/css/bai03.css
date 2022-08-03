@@ -1,0 +1,100 @@
+:root {
+    --width: 80%;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background-color: rgb(17, 3, 66);
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu > li > a {
+    display: block;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+ul.menu > li > a:hover {
+    background-color: blue;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-bet {
+    justify-content: space-between;
+}
+
+.header {
+    background-color: rgb(47, 47, 163);
+}
+
+h1.subject {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 3px 4px 3px whitesmoke;
+}
+
+.forum h1.subject {
+    background-color: blue;
+    padding: 1rem 10px;
+    margin-bottom: 0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.topics {
+    background-color: lightblue;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.topic {
+    padding: 10px;
+    border-bottom: 1px solid darkblue;
+}
+
+.topic:last-child {
+    border-bottom: none;
+}
+
+.topic img {
+    width: 120px;
+    border-radius: 50%;
+}
+.container {
+    width: var(--width);
+    margin: 0 auto;
+}
+
+.ads > div {
+    background: linear-gradient(blue, darkblue);
+    color: white;
+    width: calc((100% - var(--width))/2 - 2%);
+    position: fixed;
+    text-align: center;
+    padding: 8rem 0;
+    border-radius: 10px;
+    margin-top: 10px;;
+}
+
+.ads > div:first-child {
+    left: 1%;
+}
+
+.ads > div:last-child {
+    right: 1%;
+}
+
+footer {
+    background-color: #0a6fa3;
+    margin-top: 10px;
+}
